@@ -4,14 +4,16 @@ using COF.Infra.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace COF.Infra.Data.Migrations
 {
     [DbContext(typeof(COFContext))]
-    partial class COFContextModelSnapshot : ModelSnapshot
+    [Migration("20210330181154_AdicaoTabelaPermissaoPessoaEConfiguracaoObjetivo")]
+    partial class AdicaoTabelaPermissaoPessoaEConfiguracaoObjetivo
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

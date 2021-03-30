@@ -20,6 +20,8 @@ namespace COF.Infra.Data.Context
 			base.OnModelCreating(modelBuilder);
 
 			modelBuilder.Entity<Pessoa>(new PessoaMapping().Configure);
+			modelBuilder.Entity<PermissaoPessoa>(new PermissaoPessoaMapping().Configure);
+			modelBuilder.Entity<ConfiguracaoObjetivo>(new ConfiguracaoObjetivoMapping().Configure);
 
 			var entites = Assembly
 				.Load("COF.Domain")

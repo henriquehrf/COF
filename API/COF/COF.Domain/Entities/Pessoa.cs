@@ -1,5 +1,6 @@
 ﻿using COF.Domain.ValueTypes;
 using System;
+using System.Collections.Generic;
 
 namespace COF.Domain.Entities
 {
@@ -37,5 +38,8 @@ namespace COF.Domain.Entities
 		public Telefone Telefone { get; }
 		public Usuario Usuario { get; }
 		public Senha Senha { get; }
+
+		public virtual ICollection<ConfiguracaoObjetivo> ConfiguracaoObjetivos { get; } = new HashSet<ConfiguracaoObjetivo>();
+
 	}
 }
