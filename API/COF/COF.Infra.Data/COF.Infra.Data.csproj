@@ -5,8 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="ObjectMapper\" />
-    <Folder Include="NotificationContext\" />
+    <Folder Include="Context\" />
+    <Folder Include="Mapping\" />
+    <Folder Include="Migrations\" />
+    <Folder Include="Repository\" />
   </ItemGroup>
 
 </Project>

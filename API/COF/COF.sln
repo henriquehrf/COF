@@ -7,13 +7,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COF.Domain", "COF.Domain\CO
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COF.Infra.CrossCutting", "COF.Infra.CrossCutting\COF.Infra.CrossCutting.csproj", "{9C2590B3-D2D7-4778-AFB1-71420245AE51}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COF.Data", "COF.Data\COF.Data.csproj", "{BE0E22AB-3EC0-4864-9972-9D89011A2AC4}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COF.Infra.Shared", "COF.Infra.Shared\COF.Infra.Shared.csproj", "{7CD4DF09-985D-4458-A882-46E0F4EBC567}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COF.Service", "COF.Service\COF.Service.csproj", "{5BFF7E11-92D2-4853-BB70-7071D465B1B4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "COF.Application", "COF.Application\COF.Application.csproj", "{2828D0EB-E8E8-4DCD-B23D-442406280A3B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "COF.Infra.Data", "COF.Infra.Data\COF.Infra.Data.csproj", "{320E2E4D-DEA5-4A23-9C8B-88CEECEECF65}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,6 @@ Global
 		{9C2590B3-D2D7-4778-AFB1-71420245AE51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C2590B3-D2D7-4778-AFB1-71420245AE51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C2590B3-D2D7-4778-AFB1-71420245AE51}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BE0E22AB-3EC0-4864-9972-9D89011A2AC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BE0E22AB-3EC0-4864-9972-9D89011A2AC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BE0E22AB-3EC0-4864-9972-9D89011A2AC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BE0E22AB-3EC0-4864-9972-9D89011A2AC4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7CD4DF09-985D-4458-A882-46E0F4EBC567}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7CD4DF09-985D-4458-A882-46E0F4EBC567}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7CD4DF09-985D-4458-A882-46E0F4EBC567}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,6 +41,10 @@ Global
 		{2828D0EB-E8E8-4DCD-B23D-442406280A3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2828D0EB-E8E8-4DCD-B23D-442406280A3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2828D0EB-E8E8-4DCD-B23D-442406280A3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{320E2E4D-DEA5-4A23-9C8B-88CEECEECF65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{320E2E4D-DEA5-4A23-9C8B-88CEECEECF65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{320E2E4D-DEA5-4A23-9C8B-88CEECEECF65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{320E2E4D-DEA5-4A23-9C8B-88CEECEECF65}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

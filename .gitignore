@@ -19,3 +19,5 @@
 /API/COF/COF.Application/bin/Debug/net5.0
 /API/COF/COF.Application/obj
 /API/COF/COF.Data/bin/Debug/net5.0
+/API/COF/COF.Infra.Data/bin/Debug/net5.0
+/API/COF/COF.Infra.Data/obj
