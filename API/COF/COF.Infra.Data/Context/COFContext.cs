@@ -24,6 +24,7 @@ namespace COF.Infra.Data.Context
 			modelBuilder.Entity<ConfiguracaoObjetivo>(new ConfiguracaoObjetivoMapping().Configure);
 			modelBuilder.Entity<ContaObjetivo>(new ContaObjetivoMapping().Configure);
 			modelBuilder.Entity<Banco>(new BancoMapping().Configure);
+			modelBuilder.Entity<ContaBancaria>(new ContaBancariaMapping().Configure);
 
 			var entites = Assembly
 				.Load("COF.Domain")

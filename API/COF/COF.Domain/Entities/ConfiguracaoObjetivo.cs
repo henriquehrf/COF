@@ -18,6 +18,8 @@ namespace COF.Domain.Entities
 		public virtual Pessoa Pessoa { get; }
 
 		public virtual ICollection<ContaObjetivo> ConfiguracaoObjetivos { get; } = new HashSet<ContaObjetivo>();
+		public virtual ICollection<ContaBancaria> ContasBancarias { get; } = new HashSet<ContaBancaria>();
+
 
 	}
 }
