@@ -1,4 +1,5 @@
 ﻿using Flunt.Notifications;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace COF.Domain.Entities
 {
@@ -9,6 +10,7 @@ namespace COF.Domain.Entities
 			Id = id;
 		}
 
+		[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 		public virtual T Id { get; protected set; }
 	}
 }

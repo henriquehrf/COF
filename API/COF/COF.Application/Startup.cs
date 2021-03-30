@@ -1,3 +1,4 @@
+using COF.Infra.CrossCutting.InversionOfControl;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -33,6 +34,7 @@ namespace COF
 				.AddMicrosoftIdentityWebApi(Configuration.GetSection("AzureAd"));
 
 			services.AddControllers();
+			services.AddDependencySql(Configuration);
 			services.AddSwaggerGen(c =>
 			{
 				c.SwaggerDoc("v1", new OpenApiInfo { Title = "COF", Version = "v1" });

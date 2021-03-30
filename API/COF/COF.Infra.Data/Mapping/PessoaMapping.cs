@@ -9,7 +9,7 @@ namespace COF.Infra.Data.Mapping
 
 		public void Configure(EntityTypeBuilder<Pessoa> builder)
 		{
-			builder.ToTable("Usuario");
+			builder.ToTable("Pessoa");
 
 			builder.HasKey(prop => prop.Id);
 
@@ -41,12 +41,14 @@ namespace COF.Infra.Data.Mapping
 			  .HasColumnType("varchar(100)");
 
 			builder.Property(prop => prop.Usuario)
+			   .HasConversion(prop => prop.ToString(), prop => prop)
 			  .IsRequired()
 			  .HasColumnName("Usuario")
 			  .HasColumnType("varchar(20)");
 
 			builder.Property(prop => prop.Senha)
-			 .IsRequired()
+			  .HasConversion(prop => prop.ToString(), prop => prop)
+			  .IsRequired()
 			  .HasColumnName("Senha")
 			  .HasColumnType("varchar(500)");
 		}
