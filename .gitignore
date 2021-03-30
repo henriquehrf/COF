@@ -15,3 +15,7 @@
 /API/COF/COF.Infra.Shared/obj
 /API/COF/COF.Service/bin/Debug/net5.0
 /API/COF/COF.Service/obj
+/API/COF/.vs/COF/config
+/API/COF/COF.Application/bin/Debug/net5.0
+/API/COF/COF.Application/obj
+/API/COF/COF.Data/bin/Debug/net5.0
