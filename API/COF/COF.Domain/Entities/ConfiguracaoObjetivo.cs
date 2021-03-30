@@ -16,5 +16,8 @@ namespace COF.Domain.Entities
 		public bool EhProprietario { get; }
 		public virtual PermissaoPessoa PermissaoPessoa { get; }
 		public virtual Pessoa Pessoa { get; }
+
+		public virtual ICollection<ContaObjetivo> ConfiguracaoObjetivos { get; } = new HashSet<ContaObjetivo>();
+
 	}
 }
