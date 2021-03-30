@@ -18,8 +18,8 @@ jobs:
       with:
         dotnet-version: 5.0.x
     - name: Restore dependencies
-      run: dotnet restore ./COF/
+      run: dotnet restore ./API/COF/
     - name: Build
-      run: dotnet build --no-restore ./COF/
+      run: dotnet build --no-restore ./API/COF/
     - name: Test
-      run: dotnet test --no-build --verbosity normal ./COF/
+      run: dotnet test --no-build --verbosity normal ./API/COF/
