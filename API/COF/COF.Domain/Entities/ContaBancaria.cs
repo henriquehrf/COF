@@ -1,4 +1,5 @@
 ﻿using COF.Domain.ValueTypes;
+using System.Collections.Generic;
 
 namespace COF.Domain.Entities
 {
@@ -19,5 +20,7 @@ namespace COF.Domain.Entities
 
 		public virtual Banco Banco { get; }
 		public virtual ConfiguracaoObjetivo ConfiguracaoObjetivo { get; }
+
+		public virtual ICollection<LancamentoContaBancaria> LancamentosContaObjetivo { get; } = new HashSet<LancamentoContaBancaria>();
 	}
 }
