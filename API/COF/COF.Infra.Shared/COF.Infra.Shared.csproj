@@ -6,7 +6,10 @@
 
   <ItemGroup>
     <Folder Include="ObjectMapper\" />
-    <Folder Include="NotificationContext\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Flunt" Version="1.0.5" />
   </ItemGroup>
 
 </Project>
