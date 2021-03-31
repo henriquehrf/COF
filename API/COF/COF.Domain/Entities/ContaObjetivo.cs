@@ -1,5 +1,6 @@
 ﻿using COF.Domain.ValueTypes;
 using System;
+using System.Collections.Generic;
 
 namespace COF.Domain.Entities
 {
@@ -34,5 +35,8 @@ namespace COF.Domain.Entities
 		public DateTime? DataHoraAlcance { get; }
 
 		public ConfiguracaoObjetivo Objetivo { get; }
+
+		public virtual ICollection<LancamentoContaObjetivo> LancamentosContaObjetivo { get; } = new HashSet<LancamentoContaObjetivo>();
+
 	}
 }
