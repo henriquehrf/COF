@@ -34,7 +34,11 @@ namespace COF
 				.AddMicrosoftIdentityWebApi(Configuration.GetSection("AzureAd"));
 
 			services.AddControllers();
+			services.AddRouting(options => options.LowercaseUrls = true);
 			services.AddDependencySql(Configuration);
+			services.AddServiceDependency();
+			services.AddSqlRepositoryDependency();
+			services.AddNotificationDependency();
 			services.AddSwaggerGen(c =>
 			{
 				c.SwaggerDoc("v1", new OpenApiInfo { Title = "COF", Version = "v1" });

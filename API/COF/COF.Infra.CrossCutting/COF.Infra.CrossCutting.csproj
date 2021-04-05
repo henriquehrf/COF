@@ -26,6 +26,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\COF.Infra.Data\COF.Infra.Data.csproj" />
+    <ProjectReference Include="..\COF.Service\COF.Service.csproj" />
   </ItemGroup>
 
 </Project>

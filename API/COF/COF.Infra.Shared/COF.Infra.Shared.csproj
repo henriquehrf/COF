@@ -5,11 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="ObjectMapper\" />
+    <PackageReference Include="Flunt" Version="1.0.5" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Flunt" Version="1.0.5" />
+    <ProjectReference Include="..\COF.Domain\COF.Domain.csproj" />
   </ItemGroup>
 
 </Project>

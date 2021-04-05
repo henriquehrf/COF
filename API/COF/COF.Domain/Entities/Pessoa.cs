@@ -6,7 +6,8 @@ namespace COF.Domain.Entities
 {
 	public class Pessoa : BaseEntity<int>
 	{
-		public Pessoa(Nome nome, 
+		public Pessoa(int id,
+					  Nome nome, 
 					  Cpf cpf, 
 					  DateTime dataNascimento, 
 					  Email email, 
@@ -14,6 +15,7 @@ namespace COF.Domain.Entities
 					  Usuario usuario, 
 					  Senha senha)
 		{
+			Id = id;
 			Nome = nome;
 			Cpf = cpf;
 			DataNascimento = dataNascimento;

@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <Folder Include="Migrations\" />
-    <Folder Include="Repository\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,6 +24,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\COF.Domain\COF.Domain.csproj" />
+    <ProjectReference Include="..\COF.Infra.Shared\COF.Infra.Shared.csproj" />
   </ItemGroup>
 
 </Project>
