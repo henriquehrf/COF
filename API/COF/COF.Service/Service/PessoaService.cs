@@ -29,38 +29,35 @@ namespace COF.Service.Service
 			return pessoa;
 		}
 
-		public Pessoa AlterarPessoa(Pessoa pessoa)
+		public void AlterarPessoa(Pessoa pessoa)
 		{
 			_notificationContext.AddNotifications(pessoa.Notifications);
 
 			ValidarCadastro(pessoa);
 
 			if (_notificationContext.Valid)
-				return _pessoaRepository.Alterar(pessoa);
-
-			return pessoa;
+				_pessoaRepository.Alterar(pessoa);
 		}
 
-		public Pessoa ExcluirPessoa(int id)
+		public void ExcluirPessoa(int id)
 		{
 			var pessoa = _pessoaRepository.Excluir(id);
-
 			if (pessoa == null)
-			{
 				_notificationContext.AddNotification("Id", "O Id informado não corresponde a nenhuma pessoa.");
-				return default;
-			}
 
-			return pessoa;
 		}
 
 		private void ValidarCadastro(Pessoa pessoa)
 		{
-			if ((_pessoaRepository.FilterAsync(p => (p.Cpf.Equals(pessoa.Cpf) && p.Id != pessoa.Id)).Result).Any())
+			if ((_pessoaRepository.Filter(p => (p.Cpf.Equals(pessoa.Cpf) && p.Id != pessoa.Id))).Any())
 				_notificationContext.AddNotification("Cpf", $"O CPF {pessoa.Cpf} já está cadastrado a uma pessoa.");
 
-			if ((_pessoaRepository.FilterAsync(p => (p.Usuario.Equals(pessoa.Usuario) && p.Id != pessoa.Id)).Result).Any())
+			if ((_pessoaRepository.Filter(p => (p.Usuario.Equals(pessoa.Usuario) && p.Id != pessoa.Id))).Any())
 				_notificationContext.AddNotification("Usuario", $"O Usuário {pessoa.Usuario} já está cadastrado a uma pessoa.");
+
+			if ((pessoa.Id) > 0 && (_pessoaRepository.ById(pessoa.Id) == null))
+				_notificationContext.AddNotification("Id", $"O Id {pessoa.Id} não corresponde a uma pessoa cadastrada.");
+
 		}
 	}
 }

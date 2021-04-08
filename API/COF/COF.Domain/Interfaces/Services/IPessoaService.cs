@@ -6,8 +6,8 @@ namespace COF.Domain.Interfaces.Services
 	{
 		Pessoa InserirPessoa(Pessoa pessoa);
 
-		Pessoa AlterarPessoa(Pessoa pessoa);
+		void AlterarPessoa(Pessoa pessoa);
 
-		Pessoa ExcluirPessoa(int id);
+		void ExcluirPessoa(int id);
 	}
 }

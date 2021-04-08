@@ -1,8 +1,7 @@
 ﻿using COF.Domain.Entities;
 using System;
-using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
-using System.Threading.Tasks;
 
 namespace COF.Domain.Interfaces.Repository
 {
@@ -12,6 +11,8 @@ namespace COF.Domain.Interfaces.Repository
 		Pessoa Alterar(Pessoa pessoa);
 		Pessoa Excluir(int id);
 		Pessoa ById(int id);
-		Task<IList<Pessoa>> FilterAsync(Expression<Func<Pessoa, bool>> predicate);
+		IQueryable<Pessoa> Filter(Expression<Func<Pessoa, bool>> predicate);
+		IQueryable<Pessoa> Todos();
+
 	}
 }

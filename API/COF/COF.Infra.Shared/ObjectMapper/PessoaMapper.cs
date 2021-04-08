@@ -7,7 +7,7 @@ namespace COF.Infra.Shared.ObjectMapper
 {
 	public static class PessoaMapper
 	{
-		public static Pessoa ToEntity(this PessoaModel objModel) => new Pessoa(id: objModel.Id,
+		public static Pessoa ToEntity(this PessoaViewModel objModel) => new Pessoa(id: objModel.Id,
 																				nome: objModel.Nome,
 																				cpf: objModel.Cpf,
 																				dataNascimento: objModel.DataNascimento,
@@ -16,7 +16,7 @@ namespace COF.Infra.Shared.ObjectMapper
 																				usuario: objModel.Usuario,
 																				senha: objModel.Senha);
 
-		public static PessoaModel ToModel(this Pessoa objRepository) => new PessoaModel()
+		public static PessoaViewModel ToModel(this Pessoa objRepository) => new PessoaViewModel()
 		{
 			Id = objRepository.Id,
 			Nome = objRepository.Nome.ToString(),
@@ -27,6 +27,6 @@ namespace COF.Infra.Shared.ObjectMapper
 			Usuario = objRepository.Usuario.ToString()
 		};
 
-		public static IEnumerable<PessoaModel> ToEnumerableModel(this IList<Pessoa> list) => new List<PessoaModel>(list.Select(obj => ToModel(obj)));
+		public static IList<PessoaViewModel> ToEnumerableModel(this IList<Pessoa> list) => new List<PessoaViewModel>(list.Select(obj => ToModel(obj)));
 	}
 }

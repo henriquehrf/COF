@@ -33,35 +33,26 @@ namespace COF.Infra.Data.Repository
 		public virtual T Excluir(int id)
 		{
 			var obj = ById(id);
-			if(obj != null)
+			if (obj != null)
 				_cofContext.Remove(obj);
 
 			return obj;
 		}
 
-		public async virtual Task<IList<T>> Todos()
+		public virtual IQueryable<T> Todos()
 		{
-			var result = await _cofContext.Set<T>().ToListAsync();
-			foreach (var obj in result.AsParallel())
-				_cofContext.Entry(obj).State = EntityState.Detached;
-			return result;
+			return _cofContext.Set<T>();
 
 		}
 
-		public async virtual Task<IList<T>> FilterAsync(Expression<Func<T, bool>> predicate)
+		public virtual IQueryable<T> Filter(Expression<Func<T, bool>> predicate)
 		{
-			var result = await _cofContext.Set<T>().Where(predicate).ToListAsync();
-			foreach (var obj in result.AsParallel())
-				_cofContext.Entry(obj).State = EntityState.Detached;
-			return result;
-
+			return _cofContext.Set<T>().Where(predicate);
 		}
 
 		public virtual T ById(int id)
 		{
 			var obj = _cofContext.Set<T>().Find(id);
-			if (obj != null)
-				_cofContext.Entry<T>(obj).State = EntityState.Detached;
 
 			return obj;
 		}

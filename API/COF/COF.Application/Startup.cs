@@ -1,3 +1,4 @@
+using COF.Infra.CrossCutting.Filter;
 using COF.Infra.CrossCutting.InversionOfControl;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -35,6 +36,13 @@ namespace COF
 
 			services.AddControllers();
 			services.AddRouting(options => options.LowercaseUrls = true);
+
+			services.AddMvc(config =>
+			{
+				config.Filters.Add<NotificationFilter>();
+				config.Filters.Add<ErrorResponseExceptionFilter>();
+			});
+
 			services.AddDependencySql(Configuration);
 			services.AddServiceDependency();
 			services.AddSqlRepositoryDependency();
@@ -52,7 +60,11 @@ namespace COF
 			{
 				app.UseDeveloperExceptionPage();
 				app.UseSwagger();
-				app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "COF v1"));
+				app.UseSwaggerUI(options =>
+				{
+					options.DefaultModelsExpandDepth(-1);
+					options.SwaggerEndpoint("/swagger/v1/swagger.json", "COF v1");
+				});
 			}
 
 			app.UseHttpsRedirection();
