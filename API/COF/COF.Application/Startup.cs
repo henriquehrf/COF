@@ -45,7 +45,7 @@ namespace COF
 
 			services.AddDependencySql(Configuration);
 			services.AddServiceDependency();
-			services.AddSqlRepositoryDependency();
+			services.AddRepositoryDependency();
 			services.AddNotificationDependency();
 			services.AddSwaggerGen(c =>
 			{

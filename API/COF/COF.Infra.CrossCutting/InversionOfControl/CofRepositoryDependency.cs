@@ -8,7 +8,7 @@ namespace COF.Infra.CrossCutting.InversionOfControl
 {
 	public static class CofRepositoryDependency
 	{
-		public static void AddSqlRepositoryDependency(this IServiceCollection services)
+		public static void AddRepositoryDependency(this IServiceCollection services)
 		{
 			services.AddScoped<IUnitOfWork, UnitOfWork>();
 			services.AddScoped<IPessoaRepository, PessoaRepository>();

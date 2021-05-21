@@ -2,7 +2,7 @@
 
 namespace COF.Domain.Enum
 {
-	public enum TipoOperacao
+	public enum TipoOperacaoEnum
 	{
 
 		[EnumAnnotation('E', "Entrada")]
